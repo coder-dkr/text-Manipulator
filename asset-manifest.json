@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/textmanipulator/static/css/main.7083f986.css",
+    "main.js": "/textmanipulator/static/js/main.532381ba.js",
+    "static/js/453.2aa9f88f.chunk.js": "/textmanipulator/static/js/453.2aa9f88f.chunk.js",
+    "index.html": "/textmanipulator/index.html",
+    "main.7083f986.css.map": "/textmanipulator/static/css/main.7083f986.css.map",
+    "main.532381ba.js.map": "/textmanipulator/static/js/main.532381ba.js.map",
+    "453.2aa9f88f.chunk.js.map": "/textmanipulator/static/js/453.2aa9f88f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7083f986.css",
+    "static/js/main.532381ba.js"
+  ]
+}
