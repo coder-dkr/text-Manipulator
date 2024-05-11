@@ -1,14 +1,14 @@
 import Alert from './components/Alert.js'
 import NavBar from './components/NavBar.js'
 import TextArea from './components/TextArea.js'
-import About from './components/About'
+// import About from './components/About'
 import React, { useState } from 'react'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 function App() {
   const [alert, setalert] = useState(null)
@@ -64,19 +64,19 @@ function App() {
  }
   return (
     <>
-      <Router>
+      {/* <Router> */}
 
         <NavBar title="Text Manipulator" About="About" mode={mode} togglemode={togglemode} active={active}/>
         <Alert alert={alert} />
-        <Routes>
-          <Route exact path="/" element={<TextArea showAlert={showAlert} heading="Enter your text below "mode={mode} />} />
-          <Route exact path="/about" element={<About Aboutactive={Aboutactive}/>} />
-         <Route exact path="/home" element={<TextArea showAlert={showAlert} heading="Enter your text below " mode={mode} />} />
-        </Routes>
+        {/* <Routes> */}
+          {/* <Route exact path="/" element={<TextArea showAlert={showAlert} heading="Enter your text below "mode={mode} />} /> */}
+          {/* <Route exact path="/about" element={<About Aboutactive={Aboutactive}/>} /> */}
+         <TextArea showAlert={showAlert} heading="Enter your text below " mode={mode} />
+        {/* </Routes> */}
 
 
 
-      </Router>
+      {/* </Router> */}
 
 
     </>
