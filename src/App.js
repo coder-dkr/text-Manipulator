@@ -1,14 +1,13 @@
 import Alert from './components/Alert.js'
 import NavBar from './components/NavBar.js'
 import TextArea from './components/TextArea.js'
-// import About from './components/About'
+import About from './components/About'
 import React, { useState } from 'react'
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   const [alert, setalert] = useState(null)
@@ -20,7 +19,7 @@ function App() {
     })
     setTimeout(() => {
       setalert(null)
-    }, 2000);
+    }, 1300);
   }
   let fix = document.getElementById("root")
 
@@ -31,18 +30,13 @@ function App() {
       fix.style.color = "white"
       setmode('dark')
       showAlert("Dark Mode Has Been Enabled", "success")
-      document.title = "Text Manipulator - Dark"
-
     }
     else if (mode === 'dark') {
       setmode('light')
       fix.style.color = "black"
       document.body.classList.remove("DarkModeEnabled")
       showAlert("Light Mode Has Been Enabled", "success")
-      document.title = "Text Manipulator - Light"
-      setTimeout(() => {
-        document.title = "Text Manipulator"
-      }, 2000)
+      
 
     }
   }
@@ -64,19 +58,20 @@ function App() {
  }
   return (
     <>
-      {/* <Router> */}
+      <Router>
 
         <NavBar title="Text Manipulator" About="About" mode={mode} togglemode={togglemode} active={active}/>
         <Alert alert={alert} />
-        {/* <Routes> */}
-          {/* <Route exact path="/" element={<TextArea showAlert={showAlert} heading="Enter your text below "mode={mode} />} /> */}
-          {/* <Route exact path="/about" element={<About Aboutactive={Aboutactive}/>} /> */}
-         <TextArea showAlert={showAlert} heading="Enter your text below " mode={mode} />
-        {/* </Routes> */}
+    
+        <Routes>
+          <Route exact path="/" element={<TextArea showAlert={showAlert} heading="Try Text Manipulator-" mode={mode} />} />
+          <Route exact path="/home" element={<TextArea showAlert={showAlert} heading="Try Text Manipulator-" mode={mode} />} />
+           <Route exact path="/about" element={<About Aboutactive={Aboutactive} mode={mode} />}/>
+        </Routes>
 
 
 
-      {/* </Router> */}
+      </Router>
 
 
     </>
